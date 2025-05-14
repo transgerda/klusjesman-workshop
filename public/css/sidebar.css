@@ -1,17 +1,16 @@
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .sidenav {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    width: 200px;
-    position: fixed;
+    height: 100vh;
+    margin-right: 20px;
+    float: left;
     text-align: start;
-    top: 0;
-    left: 0;
     background-color: #383535;
-    overflow-x: hidden;
-    padding-top: 20px;
     h1{
         color: white;
         padding: 10px;
@@ -29,3 +28,4 @@
         color: #f1f1f1;
     }
 }
+
