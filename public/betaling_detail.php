@@ -5,7 +5,6 @@
   $id = $_GET['id'];
   $facturen = $factuur->getFactuurById($id);
 
-  print_r($facturen);
 ?>
 
 
