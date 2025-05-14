@@ -4,8 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sidebar').load('sidebar.html');
+    })
+  </script>
 </head>
 <body>
+  <div class="sidebar"></div>
   <form method="post">
     <label for="naam">Naam:</label><br>
     <input type="text" name="naam" id="naam"><br>
