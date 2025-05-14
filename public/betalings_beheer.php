@@ -5,6 +5,17 @@
   $alleFacturen = $factuur->getFacturen();
 ?>
 
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sidebar').load('sidebar.php');
+    })
+  </script>
+</head>
+
+<div class="sidebar"></div>
+
 <h1>Betalings Beheer</h1>
 
 <table border=1>

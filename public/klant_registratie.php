@@ -43,8 +43,6 @@
 
       if ($klant->insertKlant($naam, $email, $adres, $telefoon_nummer)) 
         header('location: klant_overzicht.php');
-      else 
-        echo 'Foutje';
     }
   ?>
 

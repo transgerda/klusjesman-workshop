@@ -6,6 +6,16 @@
   $klant = $cKlant->getKlantById($klantId);
 ?>
 
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sidebar').load('sidebar.php');
+    })
+  </script>
+</head>
+
+<div class="sidebar"></div>
 
 <table>
   <tr>

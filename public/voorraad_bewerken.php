@@ -6,6 +6,16 @@
   $voorraadDetails = $voorraad->getVoorraadById($id);
 ?>
 
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sidebar').load('sidebar.php');
+    })
+  </script>
+</head>
+
+<div class="sidebar"></div>
 <table border=1>
   <tr>
     <td>Id</td>
@@ -26,6 +36,8 @@
     </tr>
   </table>
   <input type="submit" name="opslaan" value="Opslaan">
+
+  <a href="voorraad_overzicht.php"></a>
 </form>
 
 <?php
@@ -35,6 +47,5 @@
     $prijs = floatval($_POST['prijs']);
 
     $voorraad->updateVoorraad($id, $naam, $aantal, $prijs);
-    header('location: voorraad_overzicht.php');
   }
 ?>
