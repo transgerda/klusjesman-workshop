@@ -17,8 +17,11 @@ VALUES
 
 CREATE TABLE klusjes (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  klant_id int NOT NULL,
   naam text NOT NULL,
-  omschrijving text NOT NULL
+  omschrijving text NOT NULL,
+
+  CONSTRAINT klus_klant FOREIGN KEY (klant_id) REFERENCES klanten(id)
 );
 
 CREATE TABLE facturen (
