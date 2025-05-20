@@ -1,5 +1,11 @@
 <?php
+  require_once('../src/klusjes.php');
+  $klusjes = new Klusjes();
 
+  if (isset($_POST['toevoegen'])) {
+    if ($klusjes->klusToevoegen($_POST['naam'], $_POST['omschrijving']))
+      header('location: klant_overzicht.php');
+  }
 
 ?>
 
@@ -19,6 +25,7 @@
 
     <label for="omschrijving">omschrijving</label>
     <input type="textarea">
+    <input type="submit" name="toevoegen" value="Toevoegen">
   </form>
 </body>
 </html>
