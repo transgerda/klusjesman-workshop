@@ -1,3 +1,14 @@
+<?php
+  require_once('../src/klant.php');
+
+  $cKlant = new Klant();
+  $klanten = $cKlant->getAllKlanten();
+
+  if (isset($_POST['zoeken'])) {
+    $klanten = $cKlant->zoekKlantenBijAdresOfNaam($_POST['query']);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +23,14 @@
   </script>
 </head>
 <body>
-    <div class="sidebar"></div>
-  <?php
-    require_once('../src/klant.php');
-
-    $cKlant = new Klant();
-    $klanten = $cKlant->getAllKlanten();
-  ?>
-
+  <div class="sidebar"></div>
+  
+  <form method="post">
+    <input type="text" name="query">
+    <input type="submit" name="zoeken" value="Zoeken">
+  </form>
+  <br>
+  
   <table border=1>
     <thead>
       <tr>

@@ -1,3 +1,19 @@
+<?php
+    require_once('../src/klant.php');
+
+    $klant = new Klant();
+
+    if (isset($_POST['toevoegen'])) {
+      $naam = $_POST['naam'];
+      $email = $_POST['email'];
+      $adres = $_POST['adres'];
+      $telefoon_nummer = $_POST['telefoon_nummer'];
+
+      if ($klant->insertKlant($naam, $email, $adres, $telefoon_nummer)) 
+        header('location: klant_overzicht.php');
+    }
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,21 +46,5 @@
   </form>
   
   <a href="klant_overzicht.php">Klant overzicht</a>
-  <?php
-    require_once('../src/klant.php');
-
-    $klant = new Klant();
-
-    if (isset($_POST['toevoegen'])) {
-      $naam = $_POST['naam'];
-      $email = $_POST['email'];
-      $adres = $_POST['adres'];
-      $telefoon_nummer = $_POST['telefoon_nummer'];
-
-      if ($klant->insertKlant($naam, $email, $adres, $telefoon_nummer)) 
-        header('location: klant_overzicht.php');
-    }
-  ?>
-
 </body>
 </html>

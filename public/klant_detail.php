@@ -17,7 +17,7 @@
 
 <div class="sidebar"></div>
 
-<table>
+<table border=1>
   <tr>
     <td>Id</td>
     <td><?= $klant['id'] ?></td>
