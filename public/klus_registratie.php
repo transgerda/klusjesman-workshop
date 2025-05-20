@@ -3,7 +3,14 @@
   $klusjes = new Klusjes();
 
   if (isset($_POST['toevoegen'])) {
-    if ($klusjes->klusToevoegen($_POST['naam'], $_POST['omschrijving'], $_GET['id']))
+    $naam = $_POST['naam'];
+    $omschrijving = $_POST['omschrijving'];
+    $klantId = $_GET['id'];
+    $aantalUur = $_POST['aantalUur'];
+    $uurKosten = $_POST['uurKosten'];
+    $voorrijKosten = $_POST['voorrijKosten'];
+
+    if ($klusjes->klusToevoegen($naam, $omschrijving, $klantId, $aantalUur, $uurKosten, $voorrijKosten))
       header('location: klant_overzicht.php');
   }
 
@@ -20,11 +27,28 @@
   <h1>Klus registrate</h1>
 
   <form method="post">
-    <label for="naam">Naam klus: </label>
-    <input type="text" name="naam"><br>
-
-    <label for="omschrijving">omschrijving</label>
-    <textarea name="omschrijving"></textarea><br>
+    <table>
+      <tr>
+        <td><label for="naam">Naam klus: </label></td>
+        <td> <input type="text" name="naam"></td>
+      </tr>
+      <tr>
+        <td><label for="omschrijving">omschrijving:</label></td>
+        <td><textarea name="omschrijving"></textarea><br></td>
+      </tr>
+      <tr>
+        <td><label for="uurKosten">Uur kosten:</label></td>
+        <td><input type="text" name="uurKosten" id="uurKosten"></td>
+      </tr>
+      <tr>
+        <td><label for="aantalUur">Aantal uur:</label></td>
+        <td><input type="text" name="aantalUur" id="aantalUur"></td>
+      </tr>
+      <tr>
+        <td><label for="voorrijKosten">Voorrij kosten:</label></td>
+        <td><input type="text" name="voorrijKosten" id="voorrijKosten"></td>
+      </tr>
+    </table>
     <input type="submit" name="toevoegen" value="Toevoegen">
   </form>
 </body>

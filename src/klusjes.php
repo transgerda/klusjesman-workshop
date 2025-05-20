@@ -2,9 +2,9 @@
   require_once('database.php');
 
   class Klusjes extends Database {
-    public function klusToevoegen($naam, $omschrijving, $klant_id) {
-      $query = "INSERT INTO klusjes (naam, omschrijving, klant_id) VALUES (?, ?, ?);";
-      $params = [$naam, $omschrijving, $klant_id];
+    public function klusToevoegen($naam, $omschrijving, $klant_id, $aantalUur, $uurKosten, $voorrijKosten) {
+      $query = "INSERT INTO klusjes (naam, omschrijving, klant_id, aantal_uur, uur_kosten, voorrij_kosten) VALUES (?, ?, ?, ?, ?, ?);";
+      $params = [$naam, $omschrijving, $klant_id, $aantalUur, $uurKosten, $voorrijKosten];
 
       return parent::voerQueryUit($query, $params);
     }
