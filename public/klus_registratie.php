@@ -3,7 +3,7 @@
   $klusjes = new Klusjes();
 
   if (isset($_POST['toevoegen'])) {
-    if ($klusjes->klusToevoegen($_POST['naam'], $_POST['omschrijving']))
+    if ($klusjes->klusToevoegen($_POST['naam'], $_POST['omschrijving'], $_GET['id']))
       header('location: klant_overzicht.php');
   }
 
@@ -19,29 +19,13 @@
 <body>
   <h1>Klus registrate</h1>
 
-  <form action="post">
+  <form method="post">
     <label for="naam">Naam klus: </label>
-    <input type="text" name="naam">
+    <input type="text" name="naam"><br>
 
     <label for="omschrijving">omschrijving</label>
-    <input type="textarea">
+    <textarea name="omschrijving"></textarea><br>
     <input type="submit" name="toevoegen" value="Toevoegen">
   </form>
-
-    <table border=1>
-    <thead>
-      <tr>
-        <td>ID</td>
-        <td>Naam</td>
-        <td>Klusjes</td>
-      </tr>
-    </thead>
-      <?php foreach ($klusjes as $klusje): ?>
-        <tr>
-        <td><?= $klusje['id'] ?></td>
-        <td><?= $klusje['naam'] ?></td>
-        <td><?= $klusje['omschrijving']?></td>
-      <?php endforeach; ?>
-    </table>
 </body>
 </html>
