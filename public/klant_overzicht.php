@@ -1,3 +1,14 @@
+<?php
+  require_once('../src/klant.php');
+
+  $cKlant = new Klant();
+  $klanten = $cKlant->getAllKlanten();
+
+  if (isset($_POST['zoeken'])) {
+    $klanten = $cKlant->zoekKlantenBijAdresOfNaam($_POST['query']);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +23,14 @@
   </script>
 </head>
 <body>
-    <div class="sidebar"></div>
-  <?php
-    require_once('../src/klant.php');
-
-    $cKlant = new Klant();
-    $klanten = $cKlant->getAllKlanten();
-  ?>
-
+  <div class="sidebar"></div>
+  
+  <form method="post">
+    <input type="text" name="query">
+    <input type="submit" name="zoeken" value="Zoeken">
+  </form>
+  <br>
+  
   <table border=1>
     <thead>
       <tr>
@@ -28,6 +39,7 @@
         <td>Adres</td>
         <td>Telefoonnummer</td>
         <td>Meer details</td>
+        <td>Klusjes</td>
       </tr>
     </thead>
       <?php foreach ($klanten as $klant): ?>
@@ -37,7 +49,7 @@
         <td><?= $klant['adres'] ?></td>
         <td><?= $klant['telefoon_nummer'] ?></td>
         <td><a href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
-        </tr>
+        <td><a href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
       <?php endforeach; ?>
     </table>
 

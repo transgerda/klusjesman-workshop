@@ -11,9 +11,13 @@ class Database {
   public function voerQueryUit($query, $params = []) {
     $statement = $this->connectie->prepare($query);
     $statement->execute($params);
-    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
-    return $rows;
-  } 
+
+    if (str_contains($query, 'SELECT')) {
+      return $statement->fetchAll(PDO::FETCH_ASSOC);
+    } else {
+      return $statement->rowCount();
+    }
+  }
 
   public function SluitVerbinding() {
     $this->connectie = null;

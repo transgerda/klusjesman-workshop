@@ -21,4 +21,11 @@
 
       return parent::voerQueryUit($query, $params)[0];
     }
+
+    public function zoekKlantenBijAdresOfNaam($zoek_opdracht) {
+      $query = "SELECT * FROM klanten WHERE adres LIKE :zoek_opdracht OR naam LIKE :zoek_opdracht;";
+      $params = [":zoek_opdracht" => "%$zoek_opdracht%"];
+
+      return parent::voerQueryUit($query, $params);
+    }
   }

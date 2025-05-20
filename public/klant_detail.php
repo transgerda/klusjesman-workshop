@@ -1,9 +1,14 @@
 <?php 
   require_once('../src/klant.php');
+  require_once('../src/klusjes.php');
+
   $cKlant = new Klant();
+  $klusjes = new Klusjes();
 
   $klantId = $_GET['id'];
   $klant = $cKlant->getKlantById($klantId);
+
+  $klusjesVanKlant = $klusjes->getAllKlusjesVanKlant($klantId);
 ?>
 
 <head>
@@ -17,7 +22,9 @@
 
 <div class="sidebar"></div>
 
-<table>
+<div class="klant_detail">
+<h1>Klant Detail</h1>
+<table border=1>
   <tr>
     <td>Id</td>
     <td><?= $klant['id'] ?></td>
@@ -34,4 +41,26 @@
     <td>Telefoonnummer</td>
     <td><?= $klant['telefoon_nummer'] ?></td>
   </tr>
+  </table>
+</div>
+
+<br><br>
+<h1>Klusjes</h1>
+<div class="klusjes">
+  <?php foreach ($klusjesVanKlant as $klusje): ?>
+    <br>
+    <table border=1>
+    <thead>
+      <tr>
+        <td>Naam</td>
+        <td>Omschrijving</td>
+      </tr>
+    </thead>
+        <tr>
+          <td><?= $klusje['naam'] ?></td>
+          <td><?= $klusje['omschrijving']?></td>
+        </tr>
+      </table>
+      <?php endforeach; ?>
 </table>
+</div>  

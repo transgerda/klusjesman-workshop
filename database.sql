@@ -5,7 +5,7 @@ CREATE TABLE klanten (
   naam text NOT NULL,
   email text NOT NULL,
   adres text NOT NULL,
-  telefoon_nummer text NOT NULL 
+  telefoon_nummer text NOT NULL
 );
 
 INSERT INTO 
@@ -14,6 +14,15 @@ VALUES
   ('Martijn', 'martijn@email.com', 'Kalverstraat 22', '0612345678'),
   ('Babs', 'babs@email.com', 'Keverstraat 32', '0687654321'),
   ('Gianluca', 'gianluca@email.com', 'Yusustraat 69', '0669696969');
+
+CREATE TABLE klusjes (
+  id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  klant_id int NOT NULL,
+  naam text NOT NULL,
+  omschrijving text NOT NULL,
+
+  CONSTRAINT klus_klant FOREIGN KEY (klant_id) REFERENCES klanten(id)
+);
 
 CREATE TABLE facturen (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
