@@ -17,6 +17,7 @@
 
 <div class="sidebar"></div>
 
+<h1>Klant Detail</h1>
 <table border=1>
   <tr>
     <td>Id</td>

@@ -39,6 +39,7 @@
         <td>Adres</td>
         <td>Telefoonnummer</td>
         <td>Meer details</td>
+        <td>Klusjes</td>
       </tr>
     </thead>
       <?php foreach ($klanten as $klant): ?>
@@ -48,7 +49,7 @@
         <td><?= $klant['adres'] ?></td>
         <td><?= $klant['telefoon_nummer'] ?></td>
         <td><a href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
-        </tr>
+        <td><a href="klant_detail.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
       <?php endforeach; ?>
     </table>
 
