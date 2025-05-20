@@ -3,7 +3,14 @@
   $klusjes = new Klusjes();
 
   if (isset($_POST['toevoegen'])) {
-    if ($klusjes->klusToevoegen($_POST['naam'], $_POST['omschrijving'], $_GET['id']))
+    $naam = $_POST['naam'];
+    $omschrijving = $_POST['omschrijving'];
+    $klantId = $_GET['id'];
+    $aantalUur = $_POST['aantalUur'];
+    $uurKosten = $_POST['uurKosten'];
+    $voorrijKosten = $_POST['voorrijKosten'];
+
+    if ($klusjes->klusToevoegen($naam, $omschrijving, $klantId, $aantalUur, $uurKosten, $voorrijKosten))
       header('location: klant_overzicht.php');
   }
 ?>
@@ -31,7 +38,7 @@
 
     <label for="omschrijving">omschrijving</label>
     <textarea name="omschrijving"></textarea><br>
-    <input class="buttonInput" type="submit" name="toevoegen" value="Toevoegen">
+    <input type="submit" name="toevoegen" value="Toevoegen">
   </form>
 </body>
 </html>
