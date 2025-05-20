@@ -6,7 +6,6 @@
     if ($klusjes->klusToevoegen($_POST['naam'], $_POST['omschrijving'], $_GET['id']))
       header('location: klant_overzicht.php');
   }
-
 ?>
 
 <!DOCTYPE html>
@@ -15,8 +14,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sidebar').load('sidebar.php');
+    })
+ </script>
 </head>
 <body>
+  <div class="sidebar"></div>
   <h1>Klus registrate</h1>
 
   <form method="post">
@@ -25,7 +31,7 @@
 
     <label for="omschrijving">omschrijving</label>
     <textarea name="omschrijving"></textarea><br>
-    <input type="submit" name="toevoegen" value="Toevoegen">
+    <input class="buttonInput" type="submit" name="toevoegen" value="Toevoegen">
   </form>
 </body>
 </html>

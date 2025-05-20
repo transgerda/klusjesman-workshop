@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: arial;
+}
+
 .sidenav {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
@@ -29,3 +33,41 @@
     }
 }
 
+table {
+    margin-bottom: 20px;
+    width: 55%;
+    tr {
+        text-align: left;
+    }
+}
+
+
+.button {
+    background-color: #383535;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buttonInput {
+    background-color: #383535;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.buttonSmall {
+    background-color: #383535;
+    color: white;
+    padding: 1px 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}

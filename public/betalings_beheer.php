@@ -18,7 +18,7 @@
 
 <h1>Betalings Beheer</h1>
 
-<table border=1>
+<table>
   <thead>
     <th>Id</th>
     <th>Klant Naam</th>

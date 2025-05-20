@@ -12,19 +12,19 @@
 ?>
 
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
-    $(document).ready(function() {
-      $('.sidebar').load('sidebar.php');
-    })
-  </script>
+  $(document).ready(function() {
+    $('.sidebar').load('sidebar.php');
+  })
+ </script>
 </head>
 
 <div class="sidebar"></div>
 
 <div class="klant_detail">
 <h1>Klant Detail</h1>
-<table border=1>
+<table
   <tr>
     <td>Id</td>
     <td><?= $klant['id'] ?></td>
@@ -49,7 +49,7 @@
 <div class="klusjes">
   <?php foreach ($klusjesVanKlant as $klusje): ?>
     <br>
-    <table border=1>
+    <table>
     <thead>
       <tr>
         <td>Naam</td>

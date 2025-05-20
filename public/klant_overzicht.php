@@ -31,15 +31,15 @@
   </form>
   <br>
   
-  <table border=1>
+  <table>
     <thead>
       <tr>
-        <td>Naam</td>
-        <td>Email</td>
-        <td>Adres</td>
-        <td>Telefoonnummer</td>
-        <td>Meer details</td>
-        <td>Klusjes</td>
+        <th>Naam</th>
+        <th>Email</th>
+        <th>Adres</th>
+        <th>Telefoonnummer</th>
+        <th>Meer details</th>
+        <th>Klusjes</th>
       </tr>
     </thead>
       <?php foreach ($klanten as $klant): ?>
@@ -48,11 +48,11 @@
         <td><?= $klant['email'] ?></td>
         <td><?= $klant['adres'] ?></td>
         <td><?= $klant['telefoon_nummer'] ?></td>
-        <td><a href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
-        <td><a href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
+        <td><a class="buttonSmall" href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
+        <td><a class="buttonSmall" href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
       <?php endforeach; ?>
     </table>
 
-    <a href="klant_registratie.php">Klant registreren</a>
+  <a class="button" href="klant_registratie.php">Klant registreren</a>
 </body>
 </html>

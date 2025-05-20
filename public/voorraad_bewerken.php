@@ -22,7 +22,7 @@
 </head>
 
 <div class="sidebar"></div>
-<table border=1>
+<table>
   <tr>
     <td>Id</td>
     <td><?= $voorraadDetails['id'] ?></td>
@@ -41,10 +41,10 @@
       <td><input type="text" name="prijs" value="<?= $prijs ?>"></td>
     </tr>
   </table>
-  <input type="submit" name="opslaan" value="Opslaan">
+  <input class="buttonInput" type="submit" name="opslaan" value="Opslaan">
 
 </form>
-<a href="voorraad_overzicht.php">Terug</a>
+<a class="buttonSmall" href="voorraad_overzicht.php">Terug</a>
 
 <?php
   if (isset($_POST['opslaan'])) {

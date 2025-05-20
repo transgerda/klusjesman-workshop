@@ -14,7 +14,7 @@
 </head>
 
 <div class="sidebar"></div>
-<table border=1>
+<table>
   <tr>
     <th>Naam</th>
     <th>Aantal</th>
@@ -27,7 +27,7 @@
       <td><?= $item['naam'] ?></td>
       <td><?= $item['aantal'] ?></td>
       <td><?= $item['prijs'] ?></td>
-      <td><a href="voorraad_bewerken.php?id=<?= $item['id'] ?>">Bewerk</a></td>
+      <td><a class="buttonSmall" href="voorraad_bewerken.php?id=<?= $item['id'] ?>">Bewerk</a></td>
     </tr>
   <?php endforeach; ?>
 </table>
