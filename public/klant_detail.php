@@ -54,11 +54,13 @@
       <tr>
         <td>Naam</td>
         <td>Omschrijving</td>
+        <td>Totaalkosten</td>
       </tr>
     </thead>
         <tr>
           <td><?= $klusje['naam'] ?></td>
-          <td><?= $klusje['omschrijving']?></td>
+          <td><?= $klusje['omschrijving'] ?></td>
+          <td><?= '€ ' . $klusje['aantal_uur'] * $klusje['uur_kosten'] + $klusje['voorrij_kosten'] ?></td>
         </tr>
       </table>
       <?php endforeach; ?>
