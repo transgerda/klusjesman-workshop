@@ -23,6 +23,7 @@ CREATE TABLE klusjes (
   aantal_uur float NOT NULL,
   uur_kosten float NOT NULL,
   voorrij_kosten float NOT NULL,
+  materiaal_kosten float NOT NULL,
 
   CONSTRAINT klus_klant FOREIGN KEY (klant_id) REFERENCES klanten(id)
 );

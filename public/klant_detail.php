@@ -45,7 +45,7 @@
 </div>
 
 <br><br>
-<h1>Klusjes</h1>
+<?php if ($klusjesVanKlant) echo "<h2>Klanten</h2>"; ?>
 <div class="klusjes">
   <?php foreach ($klusjesVanKlant as $klusje): ?>
     <br>
