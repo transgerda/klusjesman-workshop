@@ -24,21 +24,20 @@ CREATE TABLE klusjes (
   uur_kosten float NOT NULL,
   voorrij_kosten float NOT NULL,
   materiaal_kosten float NOT NULL,
+  totaal_kosten FLOAT GENERATED ALWAYS AS ((aantal_uur * uur_kosten) + voorrij_kosten + materiaal_kosten) STORED,
 
   CONSTRAINT klus_klant FOREIGN KEY (klant_id) REFERENCES klanten(id)
 );
 
 CREATE TABLE facturen (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  klantId int NOT NULL,
+  klant_id int NOT NULL,
+  klus_id int NOT NULL,
   betaling_status tinyint DEFAULT 0,
-  uur_kosten float,
-  materiaal_kosten float,
-  voorrij_kosten float,
-  totaal_kosten float,
   datum_gemaakt DATETIME DEFAULT CURRENT_TIMESTAMP,
 
-  CONSTRAINT factuur_klant FOREIGN KEY (klantId) REFERENCES klanten(id)
+  CONSTRAINT factuur_klusje FOREIGN KEY (klus_id) REFERENCES klusjes(id),
+  CONSTRAINT factuur_klant FOREIGN KEY (klant_id) REFERENCES klanten(id)
 );
 
 CREATE TABLE voorraad (

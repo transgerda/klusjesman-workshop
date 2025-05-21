@@ -1,6 +1,6 @@
 <?php 
-  require_once('../src/facturen.php');
-  $factuur = new Facturen();
+  require_once('../src/factuur.php');
+  $factuur = new Factuur();
 
   $alleFacturen = $factuur->getFacturen();
 ?>
@@ -32,7 +32,7 @@
           <td><?= $facturen['naam'] ?></td>
           <td><?= '€ ', $facturen['totaal_kosten'] ?></td>
           <?= $facturen['betaling_status'] ? "<td>Betaald</td>" : "<td>Niet betaald</td>" ?>
-          <td><a href="betaling_detail.php?id=<?= $facturen['id'] ?>">bekijk</a></td>
+          <td><a href="factuur_detail.php?id=<?= $facturen['id'] ?>">bekijk</a></td>
         </tr>
       <?php endforeach; ?>
 </table>

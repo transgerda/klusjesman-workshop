@@ -5,6 +5,6 @@
         <hr>
         <a href="klant_overzicht.php"> Klanten</a>
         <a href="voorraad_overzicht.php"> Vooraad</a>
-        <a href="betalings_beheer.php"> Facturen</a>
+        <a href="factuur_overzicht.php"> Facturen</a>
     </div>
 </head>

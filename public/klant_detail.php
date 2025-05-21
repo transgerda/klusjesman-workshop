@@ -70,7 +70,7 @@
           <td><?= '€ ' . $klusje['materiaal_kosten'] ?></td>
           <td><?= '€ ' . $klusje['voorrij_kosten'] ?></td>
           <td><?= '€ ' . $klusje['aantal_uur'] * $klusje['uur_kosten'] + $klusje['voorrij_kosten'] ?></td>
-          <td><a class="buttonSmall" href="factuur_registratie.php?klantId=<?= $klant['id'] ?>?klusId<?= $klusje['id'] ?>">Factuur maken</a></td>
+          <td><a class="buttonSmall" href="factuur_registratie.php?klantId=<?= $klant['id'] ?>&klusId=<?= $klusje['id'] ?>">Factuur maken</a></td>
         </tr>
       </table>
       <?php endforeach; ?>
