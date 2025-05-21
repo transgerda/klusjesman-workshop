@@ -67,6 +67,6 @@
   </form>
 
   <br>
-  <a href="klant_overzicht.php">Terug naar overzicht</a>
+  <button class="button"><a href="klant_overzicht.php">Terug naar overzicht</a></button>
 </body>
 </html>
