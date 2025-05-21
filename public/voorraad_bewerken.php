@@ -10,6 +10,17 @@
     $aantal = $voorraadDetails['aantal'];
     $prijs = $voorraadDetails['prijs'];
   }
+
+  if (isset($_POST['opslaan'])) {
+    $naam = $_POST['naam'];
+    $aantal = floatval($_POST['aantal']);
+    $prijs = floatval($_POST['prijs']);
+
+    if ($voorraad->updateVoorraad($id, $naam, $aantal, $prijs))
+      header('location: voorraad_overzicht.php');
+    else 
+      $errorMessage = "Foutje";
+  }
 ?>
 
 <head>
@@ -42,16 +53,6 @@
     </tr>
   </table>
   <input class="buttonInput" type="submit" name="opslaan" value="Opslaan">
-
+  <?= $errorMessage ?? null ?>
 </form>
 <a class="buttonSmall" href="voorraad_overzicht.php">Terug</a>
-
-<?php
-  if (isset($_POST['opslaan'])) {
-    $naam = $_POST['naam'];
-    $aantal = floatval($_POST['aantal']);
-    $prijs = floatval($_POST['prijs']);
-
-    $voorraad->updateVoorraad($id, $naam, $aantal, $prijs);
-  }
-?>
