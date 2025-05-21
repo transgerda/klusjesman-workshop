@@ -63,10 +63,10 @@
       </tr>
     </table> 
     <?= $errorMessage ?? null ?>
-    <input type="submit" name="toevoegen" value="Toevoegen">
+    <input class="buttonInput" type="submit" name="toevoegen" value="Toevoegen">
   </form>
 
   <br>
-  <a href="klant_overzicht.php">Terug naar overzicht</a>
+  <a class="button" href="klant_overzicht.php">Terug naar overzicht</a>
 </body>
 </html>

@@ -54,13 +54,23 @@
       <tr>
         <td>Naam</td>
         <td>Omschrijving</td>
+        <td>Totaal Uren</td>
+        <td>Urenkosten</td>
+        <td>Materiaalkosten</td>
+        <td>Voorrijkosten</td>
         <td>Totaalkosten</td>
+        <td>Factuur</td>
       </tr>
     </thead>
         <tr>
           <td><?= $klusje['naam'] ?></td>
           <td><?= $klusje['omschrijving'] ?></td>
+          <td><?= $klusje['aantal_uur'] ?></td>
+          <td><?= '€ ' . $klusje['uur_kosten'] ?></td>
+          <td><?= '€ ' . $klusje['materiaal_kosten'] ?></td>
+          <td><?= '€ ' . $klusje['voorrij_kosten'] ?></td>
           <td><?= '€ ' . $klusje['aantal_uur'] * $klusje['uur_kosten'] + $klusje['voorrij_kosten'] ?></td>
+          <td><a class="buttonSmall" href="factuur_registratie.php?klantId=<?= $klant['id'] ?>?klusId<?= $klusje['id'] ?>">Factuur maken</a></td>
         </tr>
       </table>
       <?php endforeach; ?>
