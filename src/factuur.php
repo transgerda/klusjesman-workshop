@@ -17,7 +17,7 @@ class Factuur extends Database
     $query = "SELECT * FROM facturen f 
     INNER JOIN klanten klant ON f.klant_id = klant.id
     INNER JOIN klusjes klus ON f.klus_id = klus.id
-    WHERE f.id = ?;";
+    WHERE f .id = ?;";
 
     $params = [$id];
 
@@ -28,6 +28,7 @@ class Factuur extends Database
     $query = "INSERT INTO facturen (klant_id, klus_id) VALUES (?, ?);";
     $params = [$klant_id, $klus_id];
 
+    
     return parent::voerQueryUit($query, $params);
   }
 

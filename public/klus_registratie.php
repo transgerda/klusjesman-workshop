@@ -12,7 +12,7 @@
     $materiaalKosten = $_POST['materiaal_kosten'];
 
     if ($klusjes->klusToevoegen($naam, $omschrijving, $klantId, $aantalUur, $uurKosten, $voorrijKosten, $materiaalKosten))
-      header('location: klant_overzicht.php');
+      header('location: klant_detail.php?id=' . $klantId);
     else
       $errorMessage = "Foutje";
   }

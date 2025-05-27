@@ -69,7 +69,7 @@
           <td><?= '€ ' . $klusje['uur_kosten'] ?></td>
           <td><?= '€ ' . $klusje['materiaal_kosten'] ?></td>
           <td><?= '€ ' . $klusje['voorrij_kosten'] ?></td>
-          <td><?= '€ ' . $klusje['aantal_uur'] * $klusje['uur_kosten'] + $klusje['voorrij_kosten'] ?></td>
+          <td><?= '€ ' . $klusje['totaal_kosten'] ?></td>
           <td><a class="buttonSmall" href="factuur_registratie.php?klantId=<?= $klant['id'] ?>&klusId=<?= $klusje['id'] ?>">Factuur maken</a></td>
         </tr>
       </table>

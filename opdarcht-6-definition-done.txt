@@ -1,0 +1,12 @@
+Definition of done
+
+5 eisen:
+Het werkt zonder fouten,
+Het werkt zoals de user storie heeft aangegeven,
+Alle taken op het scrumbord zijn klaar,
+De code is gemerged zonder fouten,
+Het is een beetje gestyled,
+
+
+Definition of done:
+Het code is allemaal gemerged zonder fouten en werkt zoals de klant vraagd op minimaal 2 laptops.u
