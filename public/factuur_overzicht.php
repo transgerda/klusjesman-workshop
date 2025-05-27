@@ -32,7 +32,7 @@
           <td><?= $facturen['naam'] ?></td>
           <td><?= '€ ', $facturen['totaal_kosten'] ?></td>
           <?= $facturen['betaling_status'] ? "<td>Betaald</td>" : "<td>Niet betaald</td>" ?>
-          <td><a href="factuur_detail.php?id=<?= $facturen['id'] ?>">bekijk</a></td>
+          <td><a class="ButtonSmall" href="factuur_detail.php?id=<?= $facturen['id'] ?>">bekijk</a></td>
         </tr>
       <?php endforeach; ?>
 </table>

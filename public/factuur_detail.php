@@ -66,6 +66,6 @@
   </tr>
 </table>
 <form method="post">
-  <input type="submit" name="status_betaald" value="Factuur betaald!">
+  <input class="buttonInput" type="submit" name="status_betaald" value="Factuur betaald!"><br><br>
 </form>
-Terug naar <a href="factuur_overzicht.php">overzicht</a>.
+Terug naar <a class="buttonSmall" href="factuur_overzicht.php">overzicht</a>.

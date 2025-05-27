@@ -27,7 +27,7 @@
   
   <form method="post">
     <input type="text" name="query">
-    <input type="submit" name="zoeken" value="Zoeken">
+    <input class="buttonSmall" type="submit" name="zoeken" value="Zoeken">
   </form>
   <br>
   
