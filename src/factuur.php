@@ -14,7 +14,7 @@ class Factuur extends Database
   }
 
   public function getFactuurById($id) {
-    $query = "SELECT * FROM facturen f 
+    $query = "SELECT klant.naam AS 'klant_naam', klus.aantal_uur, klus.uur_kosten, klus.materiaal_kosten, klus.naam, klus.totaal_kosten, f.betaling_status, klus.voorrij_kosten FROM facturen f 
     INNER JOIN klanten klant ON f.klant_id = klant.id
     INNER JOIN klusjes klus ON f.klus_id = klus.id
     WHERE f.id = ?;";

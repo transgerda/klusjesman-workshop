@@ -1,9 +1,11 @@
 <?php 
   require_once('../src/klant.php');
   require_once('../src/klusjes.php');
+  require_once('../src/adres.php');
 
   $cKlant = new Klant();
   $klusjes = new Klusjes();
+  $adres = new Adres();
 
   $klantId = $_GET['id'];
   $klant = $cKlant->getKlantById($klantId);
@@ -24,7 +26,7 @@
 
 <div class="klant_detail">
 <h1>Klant Detail</h1>
-<table
+<table>
   <tr>
     <td>Id</td>
     <td><?= $klant['id'] ?></td>
@@ -41,8 +43,31 @@
     <td>Telefoonnummer</td>
     <td><?= $klant['telefoon_nummer'] ?></td>
   </tr>
+  <tr>
+    <td>Adres</td>
+    <td><?= $klant['adres'] ?></td>
+  </tr>
   </table>
+
+
+  <a href="adres_update.php?klant_id=<?= $klant['id'] ?>">Update adres</a>
 </div>
+
+<br><br>
+
+<?php if ($adres->getOudeAdressen($klantId)): ?>
+  <h2>Oude adressen</h2>
+  <div>
+    <table>
+      <?php foreach ($adres->getOudeAdressen($klantId) as $oudAdres): ?>
+        <tr>
+          <td><?= $oudAdres['adres'] ?></td>
+        </tr>
+      <?php endforeach; ?>
+    </table>
+  </div>
+<?php endif; ?>
+
 
 <br><br>
 <?php if ($klusjesVanKlant) echo "<h2>Klanten</h2>"; ?>
