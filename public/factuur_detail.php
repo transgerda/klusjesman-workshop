@@ -25,32 +25,20 @@
 <h1>Factuur detail</h1>
 <table>
   <tr>
-    <td>Id</td>
-    <td><?= $huidigFactuur['id'] ?></td>
+    <td>Naam klant</td>
+    <td><?= $huidigFactuur['klant_naam'] ?></td>
   </tr>
   <tr>
     <td>Naam</td>
     <td><?= $huidigFactuur['naam'] ?></td>
   </tr>
   <tr>
-    <td>Email</td>
-    <td><?= $huidigFactuur['email'] ?></td>
-  </tr>
-  <tr>
-    <td>Telefoonnummer</td>
-    <td><?= $huidigFactuur['telefoon_nummer'] ?></td>
-  </tr>
-  <tr>
-    <td>Adres</td>
-    <td><?= $huidigFactuur['adres'] ?></td>
-  </tr>
-  <tr>
-    <td>betaling status</td>
-    <?= $huidigFactuur['betaling_status'] ? "<td>Betaald</td>" : "<td>Niet betaald</td>" ?>
-  </tr>
-  <tr>
     <td>Uur kosten</td>
     <td><?='€ ',  $huidigFactuur['uur_kosten'] ?></td>
+  </tr>
+  <tr>
+    <td>Aantal uur</td>
+    <td><?='€ ',  $huidigFactuur['aantal_uur'] ?></td>
   </tr>
   <tr>
     <td>Material Kosten</td>
@@ -63,6 +51,10 @@
   <tr>
     <td>totale kosten</td>
     <td><?='€ ',  $huidigFactuur['totaal_kosten'] ?></td>
+  </tr>
+  <tr>
+    <td>betaling status</td>
+    <?= $huidigFactuur['betaling_status'] ? "<td>Betaald</td>" : "<td>Niet betaald</td>" ?>
   </tr>
 </table>
 <form method="post">

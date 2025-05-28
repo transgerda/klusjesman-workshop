@@ -1,19 +1,12 @@
 CREATE DATABASE klusjesman;
+use klusjesman;
 
 CREATE TABLE klanten (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   naam text NOT NULL,
   email text NOT NULL,
-  adres text NOT NULL,
   telefoon_nummer text NOT NULL
 );
-
-INSERT INTO 
-  klanten (naam, email, adres, telefoon_nummer)
-VALUES
-  ('Martijn', 'martijn@email.com', 'Kalverstraat 22', '0612345678'),
-  ('Babs', 'babs@email.com', 'Keverstraat 32', '0687654321'),
-  ('Gianluca', 'gianluca@email.com', 'Yusustraat 69', '0669696969');
 
 CREATE TABLE klusjes (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -24,9 +17,14 @@ CREATE TABLE klusjes (
   uur_kosten float NOT NULL,
   voorrij_kosten float NOT NULL,
   materiaal_kosten float NOT NULL,
-  totaal_kosten FLOAT GENERATED ALWAYS AS ((aantal_uur * uur_kosten) + voorrij_kosten + materiaal_kosten) STORED,
+  totaal_kosten FLOAT GENERATED ALWAYS AS ((aantal_uur * uur_kosten) + voorrij_kosten + materiaal_kosten) STORED
+);
 
-  CONSTRAINT klus_klant FOREIGN KEY (klant_id) REFERENCES klanten(id)
+CREATE TABLE adressen (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  adres text NOT NULL,
+  huidig_adres INT NOT NULL DEFAULT 1,
+  klant_id INT NOT NULL
 );
 
 CREATE TABLE facturen (
@@ -46,6 +44,21 @@ CREATE TABLE voorraad (
   aantal int NOT NULL,
   prijs float NOT NULL
 );
+
+
+INSERT INTO 
+  klanten (naam, email, telefoon_nummer)
+VALUES
+  ('Martijn', 'martijn@email.com', '0612345678'),
+  ('Babs', 'babs@email.com', '0687654321'),
+  ('Gianluca', 'gianluca@email.com', '0669696969');
+
+INSERT INTO 
+  adressen (adres, klant_id)
+VALUES
+  ('Yusustraat 22', 1),
+  ('Didam', 2),
+  ('Afrika', 3);
 
 INSERT INTO voorraad 
   (naam, aantal, prijs)
