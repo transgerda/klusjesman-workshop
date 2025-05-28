@@ -15,11 +15,6 @@ body {
     float: left;
     text-align: start;
     background-color: #383535;
-    h1{
-        color: white;
-        padding: 10px;
-    }
-
     a {
         padding: 20px 8px 20px 16px;
         text-decoration: none;
