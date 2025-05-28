@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/sidebar.css">
 <head>
     <div class="sidenav">
-        <img src="klusjesman-workshop\public\css\logo.svg" alt="">
+        <img src="css\logo.svg"style="width:128px;height:128px;" alt="">
         <hr>
         <a href="klant_overzicht.php"> Klanten</a>
         <a href="voorraad_overzicht.php"> Vooraad</a>
