@@ -26,33 +26,34 @@
   <div class="sidebar"></div>
   
   <form method="post">
-    <input type="text" name="query">
-    <input class="buttonSmall" type="submit" name="zoeken" value="Zoeken">
+    <input class="inputStyling" type="text" name="query">
+    <input class="buttonKlantZoeken" type="submit" name="zoeken" value="Zoeken">
   </form>
   <br>
-  
-  <table>
+  <a class="button" href="klant_registratie.php">Klant registreren</a>
+  <table id="overzichtTable">
     <thead>
       <tr>
         <th>Naam</th>
         <th>Email</th>
         <th>Adres</th>
         <th>Telefoonnummer</th>
-        <th>Meer details</th>
+        <th>Details</th>
         <th>Klusjes</th>
       </tr>
     </thead>
       <?php foreach ($klanten as $klant): ?>
-        <tr>
-        <td><?= $klant['naam'] ?></td>
-        <td><?= $klant['email'] ?></td>
-        <td><?= $klant['adres'] ?></td>
-        <td><?= $klant['telefoon_nummer'] ?></td>
-        <td><a class="buttonSmall" href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
-        <td><a class="buttonSmall" href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
-      <?php endforeach; ?>
-    </table>
+      <tr>
+      <td><?= $klant['naam'] ?></td>
+      
+      <td><?= $klant['email'] ?></td>
+      <td><?= $klant['adres'] ?></td>
+      <td><?= $klant['telefoon_nummer'] ?></td>
+      <td><a class="buttonSmall" href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
+      <td><a class="buttonSmall" href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
+    <?php endforeach; ?>
+  </table>
 
-  <a class="button" href="klant_registratie.php">Klant registreren</a>
+  
 </body>
 </html>

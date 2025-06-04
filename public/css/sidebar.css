@@ -18,9 +18,10 @@ body {
     a {
         padding: 20px 8px 20px 16px;
         text-decoration: none;
-        font-size: 25px;
+        font-size: 35px;
         color: #cbcbcb;
         display: block;
+        align-items: center;
     }
 
     a:hover {
@@ -30,12 +31,28 @@ body {
 
 table {
     margin-bottom: 20px;
-    width: 55%;
+    width: 65%;
+
+    thead th {
+      padding: 0px 20px 5px 0px; /* Adjust values for more/less space */
+    }
+
     tr {
         text-align: left;
+
+        th {
+            font-size: 25px;
+        }
+
+        td {
+            font-size: 20px;
+        }
     }
 }
 
+#overzichtTable {
+    margin-top: 20px;
+}
 
 .button {
     background-color: #383535;
@@ -55,6 +72,7 @@ table {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+    
 }
 
 .buttonSmall {
@@ -65,4 +83,22 @@ table {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
+}
+
+.buttonKlantZoeken {
+    background-color: #383535;
+    color: white;
+    padding: 9px 20px 9px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.inputStyling {
+    width: 450px;
+    height: 36px;
+    margin-top: 20px;
+    font-size: 20px;
 }

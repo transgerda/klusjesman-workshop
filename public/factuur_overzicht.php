@@ -16,7 +16,9 @@
 
 <div class="sidebar"></div>
 
-<h1>Betalings Beheer</h1>
+<h1>Betalings Beheer</h1><br>
+
+<br>
 
 <table>
   <thead>
