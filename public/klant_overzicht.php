@@ -5,7 +5,10 @@
   $klanten = $cKlant->getAllKlanten();
 
   if (isset($_POST['zoeken'])) {
-    $klanten = $cKlant->zoekKlantenBijAdresOfNaam($_POST['query']);
+    if ($_POST['query'] == "")
+      $klanten = $cKlant->getALlKlanten();
+    else
+      $klanten = $cKlant->zoekKlantenBijAdresOfNaam($_POST['query']);
   }
 ?>
 
@@ -43,16 +46,15 @@
       </tr>
     </thead>
       <?php foreach ($klanten as $klant): ?>
-      <tr>
-      <td><?= $klant['naam'] ?></td>
-      
-      <td><?= $klant['email'] ?></td>
-      <td><?= $klant['adres'] ?></td>
-      <td><?= $klant['telefoon_nummer'] ?></td>
-      <td><a class="buttonSmall" href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
-      <td><a class="buttonSmall" href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
-    <?php endforeach; ?>
-  </table>
+        <tr>
+        <td><?= $klant['naam'] ?></td>
+        <td><?= $klant['email'] ?></td>
+        <td><?= $klant['adres'] ?></td>
+        <td><?= $klant['telefoon_nummer'] ?></td>
+        <td><a class="buttonSmall" href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
+        <td><a class="buttonSmall" href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
+      <?php endforeach; ?>
+    </table>
 
   
 </body>
