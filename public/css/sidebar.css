@@ -119,6 +119,8 @@ table {
 
 .textAdresNormaal {
     font-size: 19px;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 .textAdres {

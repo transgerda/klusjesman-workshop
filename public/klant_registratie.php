@@ -24,16 +24,16 @@
 
   <form method="post">
     <label class="textAdresNormaal" for="naam">Naam:</label><br>
-    <input type="text" name="naam" id="naam"><br>
+    <input class="textAdresNormaal" type="text" name="naam" id="naam"><br>
   
     <label class="textAdresNormaal" for="adres">Telefoonnummer:</label><br>
-    <input type="text" name="telefoon_nummer" id="telefoon_nummer"><br>
+    <input class="textAdresNormaal" type="text" name="telefoon_nummer" id="telefoon_nummer"><br>
   
     <label class="textAdresNormaal" for="email">Email-adres:</label><br>
-    <input type="email" name="email" id="email"><br>
+    <input class="textAdresNormaal" type="email" name="email" id="email"><br>
   
-    <label class="textAdresNormaal" for="adres">Adres:</label><br>
-    <input type="text" name="adres" id="adres"><br>
+    <label class="textAdresNormaal" class="textAdresNormaal" for="adres">Adres:</label><br>
+    <input class="textAdresNormaal" type="text" name="adres" id="adres"><br>
     <br>
     <input class="buttonSmall" type="submit" name="toevoegen" value="Toevoegen">
   </form>
