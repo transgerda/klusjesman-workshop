@@ -49,7 +49,11 @@
         <tr>
         <td><?= $klant['naam'] ?></td>
         <td><?= $klant['email'] ?></td>
-        <td><?= $klant['adres'] ?></td>
+        <?php if ($klant['huidig_adres']): ?>
+          <td><?= $klant['adres'] ?></td>
+        <?php else: ?>
+          <td style='display: inline'><p style='color: red;'>Oud adres</p><?= $klant['adres'] ?></td>
+        <?php endif; ?>
         <td><?= $klant['telefoon_nummer'] ?></td>
         <td><a class="buttonSmall" href="klant_detail.php?id=<?= $klant['id'] ?>">bekijk</a></td>
         <td><a class="buttonSmall" href="klus_registratie.php?id=<?= $klant['id'] ?>">klusje toevoegen</a></td>
