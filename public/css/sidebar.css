@@ -15,17 +15,31 @@ body {
     float: left;
     text-align: start;
     background-color: #383535;
-    a {
-        padding: 20px 8px 20px 16px;
-        text-decoration: none;
-        font-size: 35px;
-        color: #cbcbcb;
+
+    button {
+        padding-right: 350px;
+        background-color: #383535;
+        border-style: none;
         display: block;
-        align-items: center;
+        max-width: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
-    a:hover {
-        color: #f1f1f1;
+    button:hover {
+        background-color: aliceblue;
+
+        a:hover {
+            color: #383535;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 2rem;
+        color: white;
+        padding-right: 350px;
+        margin-left: 15px;
     }
 }
 

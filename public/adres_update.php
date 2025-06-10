@@ -10,8 +10,17 @@
   }
 ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.sidebar').load('sidebar.php');
+    })
+  </script>
+
+<div class="sidebar"></div>
+
 <form method="post">
   <label for="adres">Nieuw adres:</label>
   <input type="text" name="adres" id="adres"><br><br>
-  <input type="submit" name="update_adres" value="Update">
+  <input class="buttonInput" type="submit" name="update_adres" value="Update">
 </form>

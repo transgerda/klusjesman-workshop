@@ -50,7 +50,7 @@
   </table>
 
 
-  <a href="adres_update.php?klant_id=<?= $klant['id'] ?>">Update adres</a>
+  <a class="button" href="adres_update.php?klant_id=<?= $klant['id'] ?>">Update adres</a>
 </div>
 
 <br><br>
