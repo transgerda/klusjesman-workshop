@@ -69,7 +69,7 @@
 <?php endif; ?>
 
 
-<br><br>
+<a class="button" href="klant_overzicht.php">Terug naar overzicht</a><br><br>
 <?php if ($klusjesVanKlant) echo "<h2>Klanten</h2>"; ?>
 <div class="klusjes">
   <?php foreach ($klusjesVanKlant as $klusje): ?>
@@ -100,4 +100,5 @@
       </table>
       <?php endforeach; ?>
 </table>
+
 </div>  

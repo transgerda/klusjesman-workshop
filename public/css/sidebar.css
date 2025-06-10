@@ -117,6 +117,9 @@ table {
     font-size: 20px;   
 }
 
+.textAdresNormaal {
+    font-size: 19px;
+}
 
 .textAdres {
     font-weight: bold;
