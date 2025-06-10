@@ -20,7 +20,7 @@
 <div class="sidebar"></div>
 
 <form method="post">
-  <label for="adres">Nieuw adres:</label>
-  <input type="text" name="adres" id="adres"><br><br>
+  <label class="textAdres" for="adres">Nieuw adres:</label><br>
+  <input class="inputStyling" type="text" name="adres" id="adres"><br><br>
   <input class="buttonInput" type="submit" name="update_adres" value="Update">
 </form>
