@@ -45,6 +45,15 @@ CREATE TABLE voorraad (
   prijs float NOT NULL
 );
 
+CREATE TABLE klusje_materialen (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  materiaal_id INT NOT NULL,
+  aantal INT NOT NULL,
+  klusje_id INT NOT NULL,
+
+  CONSTRAINT fk_klusje_materialen_klusje FOREIGN KEY (klusje_id) REFERENCES klusjes(id),
+  CONSTRAINT fk_klusje_materialen_materiaal FOREIGN KEY (materiaal_id) REFERENCES voorraad(id)
+);
 
 INSERT INTO 
   klanten (naam, email, telefoon_nummer)
